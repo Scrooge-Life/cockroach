@@ -1,4 +1,4 @@
-FROM cockroachdb/cockroach:v22.1.8
+FROM cockroachdb/cockroach:v22.1.9
 
 ADD start.sh /cockroach/
 
