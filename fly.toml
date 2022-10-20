@@ -7,15 +7,16 @@ services = []
 [build]
   image = "ghcr.io/scrooge-life/cockroach:latest"
 
-[[checks.crdb]]
-  grace_period = "60s"
-  interval = "15s"
-  method = "get"
-  path = "/health?ready=1"
-  port = 8080
-  protocol = "http"
-  timeout = "10s"
-  type = "http"
+[checks]
+  [checks.crdb]
+    grace_period = "60s"
+    interval = "15s"
+    method = "get"
+    path = "/health?ready=1"
+    port = 8080
+    protocol = "http"
+    timeout = "10s"
+    type = "http"
 
 [deploy]
   strategy = "rolling"
