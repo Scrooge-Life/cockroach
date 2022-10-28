@@ -1,4 +1,4 @@
-FROM cockroachdb/cockroach:v22.1.9
+FROM cockroachdb/cockroach:v22.1.10
 
 # We set and install the en US langauge pack to fix COLLATE issues
 ENV LANG='en_US.UTF-8'
